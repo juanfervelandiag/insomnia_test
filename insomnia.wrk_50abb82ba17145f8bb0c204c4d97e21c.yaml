@@ -147,6 +147,164 @@ collection:
         value: "{{token_auth}}"
         description: ""
         disabled: true
+  - name: WSGYG112
+    meta:
+      id: fld_60412d1e382b4a0a96d322165701acb2
+      created: 1776370374098
+      modified: 1776370374098
+      sortKey: -1776370374098
+      description: ""
+    children:
+      - url: "{{base_url}}/{{folder_base}}/WSGYG112/Api/Cupo/PagoVirtualCupo/Generación\
+          Transacción"
+        name: Pago Virtual Cupo
+        meta:
+          id: req_a115038c89a34f87832858721d8517c8
+          created: 1776370379557
+          modified: 1776373307033
+          isPrivate: false
+          description: ""
+          sortKey: -1776370379557
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "numeroCredito": "",
+              "codTipoTrx": "",
+              "valorTransaccion": "",
+              "codEstablecimiento": "",
+              "numComprobante": "",
+              "fechaEfectivaTrx": "",
+              "horaTrx": "",
+              "numeroReferencia": ""
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token_auth}}"
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/{{folder_base}}/WSGYG112/Api/Cupo/ReversosCupo/GeneraciónTra\
+          nsacción"
+        name: Reversos Cupo
+        meta:
+          id: req_616e7636205e4930a5622e0c7a6fab1d
+          created: 1776373331541
+          modified: 1776373358504
+          isPrivate: false
+          description: ""
+          sortKey: -1776359610447.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "numeroReferencia": "",
+              "fiidOrigen": "",
+              "numComprobante": "",
+              "numeroCredito": "",
+              "valorTransaccion": "",
+              "tipoOperacion": "",
+              "codTipoTrx": "",
+              "codEstablecimiento": "",
+              "fechaEfectivaTrx": "",
+              "horaTrx": "",
+              "idTerminal": "",
+              "codMonedaTrx": "",
+              "codEntidadRedOriginadora": "",
+              "causal": ""
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token_auth}}"
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/{{folder_base}}/WSGYG112/Api/Cupo/TransaccionesPOS/Generació\
+          nTransacción"
+        name: Transacciones POS
+        meta:
+          id: req_c46744f14ecf4042b93e53f8e94cfa22
+          created: 1776373404418
+          modified: 1776373442999
+          isPrivate: false
+          description: ""
+          sortKey: -1776354225892.75
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "idTerminal": "",
+              "fiidOrigen": "",
+              "numComprobante": "",
+              "codEstablecimiento": "",
+              "nombreEstablecimiento": "",
+              "codCiudadEstablecimiento": "",
+              "fechaEfectivaTrx": "",
+              "horaTrx": "",
+              "numeroPrestamo": "",
+              "codTipoTrx": "",
+              "numCuotas": "",
+              "valorTrx": "",
+              "valorBaseIVA": "",
+              "valorIVA": "",
+              "valorPropina": "",
+              "valorImpConsumo": "",
+              "modoDeEntrada": "",
+              "numeroReferencia": "",
+              "numeroSecuencia": "",
+              "reD_ADQ_TX": "",
+              "codMonedaTrx": "",
+              "codEntidadRedOriginadora": "",
+              "referenciaPago": ""
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{token_auth}}"
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
