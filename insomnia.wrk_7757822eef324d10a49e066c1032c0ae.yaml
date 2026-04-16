@@ -1,0 +1,19 @@
+type: environment.insomnia.rest/5.0
+schema_version: "5.1"
+name: Test
+meta:
+  id: wrk_7757822eef324d10a49e066c1032c0ae
+  created: 1776346027399
+  modified: 1776356020085
+  description: ""
+environments:
+  name: Base Environment
+  meta:
+    id: env_15107637a52aacd2ff69fb331860b0290fa79fe9
+    created: 1776346027410
+    modified: 1776356027009
+    isPrivate: false
+  data:
+    base_url: https://10.241.192.24:10443
+    folder_base: ""
+    token_auth: ""

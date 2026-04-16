@@ -1,0 +1,19 @@
+type: environment.insomnia.rest/5.0
+schema_version: "5.1"
+name: Desarrollo
+meta:
+  id: wrk_d9b38ffbc1664d538c14231712a4140a
+  created: 1776355936680
+  modified: 1776355936680
+  description: ""
+environments:
+  name: Base Environment
+  meta:
+    id: env_deb5b12dfa664ec6aea0e1b5fc2aeccb
+    created: 1776346027410
+    modified: 1776355963042
+    isPrivate: false
+  data:
+    base_url: https://10.242.4.7
+    folder_base: WEB_SERVICES_TUYA
+    token_auth: ""

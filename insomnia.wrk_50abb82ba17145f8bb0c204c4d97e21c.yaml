@@ -1,0 +1,164 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: WSGYG119
+meta:
+  id: wrk_50abb82ba17145f8bb0c204c4d97e21c
+  created: 1776346285728
+  modified: 1776350456951
+  description: ""
+collection:
+  - name: login
+    meta:
+      id: fld_79954caca100462c9cf3585178134f52
+      created: 1776346387782
+      modified: 1776355871664
+      sortKey: -1776346387782
+      description: ""
+    children:
+      - url: "{{base_url}}/{{ folder_base }}/WSJWT/Seguridad/Autenticacion"
+        name: Authentication
+        meta:
+          id: req_a9e6b099810645cc8c3e7efbe7e83d74
+          created: 1776346462374
+          modified: 1776358446827
+          isPrivate: false
+          description: ""
+          sortKey: -1776346462374
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+          - name: UserName
+            value: FJFV
+            description: ""
+            disabled: false
+          - name: Password
+            value: GYG1
+            description: ""
+            disabled: false
+        scripts:
+          afterResponse: |-
+            const response = insomnia.response.json();
+            if(insomnia.expect(insomnia.response.code).to.eql(200)){
+            	insomnia.environment.set("token_auth", response.acces_token);
+            }
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: WSGYG119
+    meta:
+      id: fld_162107364cd6415c81330bb9b1e8f42b
+      created: 1776348833780
+      modified: 1776349032709
+      sortKey: -1776348833780
+      description: ""
+    children:
+      - url: "{{base_url}}/WSGYG119/POST_NL090_NL093"
+        name: Aplicación de Pagos
+        meta:
+          id: req_9c383e5198df412aad2f2c2839eca381
+          created: 1776348841338
+          modified: 1776355854790
+          isPrivate: false
+          description: ""
+          sortKey: -1776348841338
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "Cod_Transaccion": 999,
+              "Fecha_Recuado": 999999999,
+              "NumComprobante": 100000000000000000,
+              "Num_Producto": "string",
+              "Usuario": "string",
+              "Valor_Transaccion": 9999999999999
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token_auth }}"
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{base_url}}/WSGYG119/POST_NL208_NL090028"
+        name: Aplicación de Compras
+        meta:
+          id: req_227d0f075c464bbdb62816bc01af9370
+          created: 1776349698767
+          modified: 1776354536997
+          isPrivate: false
+          description: ""
+          sortKey: -1776347651856
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "Cod_Transaccion": 999,
+              "Establecimiento": 100000000000000000,
+              "Fecha_De_Transaccion": 999999999,
+              "NumComprobante": 100000000000000000,
+              "Numero_Cuotas": 999,
+              "Numero_Del_Prestamo": "string",
+              "Usuario": "string",
+              "Valor_Transaccion": 9999999999999
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.5.0
+            description: ""
+            disabled: false
+        authentication:
+          type: bearer
+          token: "{{ _.token_auth }}"
+          prefix: Bearer
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    headers:
+      - name: Athorization
+        value: "{{token_auth}}"
+        description: ""
+        disabled: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_41756547483c4db6a89ccbb4fbb19ea5
+    created: 1776346253801
+    modified: 1776355871627
+environments:
+  name: Base Environment
+  meta:
+    id: env_5d30529866344ecda832ecb0b534bbe3
+    created: 1776346253796
+    modified: 1776355871632
+    isPrivate: false
+  data:
+    token_auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc3VhcmlvIjoiRkpGViIsIlJlZnJlc2hUb2tlbiI6ImlxbVFrVkdpNGltQTNPVlMlSVVCTDZHU0VmYlRQeE4_UEgvRDNDekUyJCUpVi9uKSVEIiwiVG9rZW4iOiJpcW1Ra1ZHaTRpbUEzT1ZTJUlVQkw2R1NFZmJUUHhOPyIsImluaXRpYWx0aW1lVmFsaWRhdGlvbiI6IjQvMTYvMjAyNiAxMToxMToxMSBBTSIsIkV4cGlyZWRUaW1lIjoiNC8xNi8yMDI2IDE6MTE6MTAgUE0iLCJBZ2VuY2lhIjoiMjAxIiwiRGF0ZUdlbmVyYXRlVG9rZW4iOiI0LzE2LzIwMjYgMTE6MTE6MTAgQU0iLCJuYmYiOjE3NzYzNTU4NzEsImV4cCI6MTc3NjM2MzA3MCwiaXNzIjoiU0lJRiJ9.V3VyG6zOD1TcyEVCTsMtEN_ByZSeL31L_O8H0uaOMi8
