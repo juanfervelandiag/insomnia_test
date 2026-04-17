@@ -1,10 +1,10 @@
 type: collection.insomnia.rest/5.0
 schema_version: "5.1"
-name: WSGYG119
+name: APIs
 meta:
   id: wrk_50abb82ba17145f8bb0c204c4d97e21c
   created: 1776346285728
-  modified: 1776350456951
+  modified: 1776457017663
   description: ""
 collection:
   - name: login
